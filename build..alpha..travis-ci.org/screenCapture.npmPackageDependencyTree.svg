@@ -28,7 +28,7 @@
 <tspan x="10" y="410">  ├─┬ sync-request@3.0.1 </tspan>
 <tspan x="10" y="426">  │ ├─┬ concat-stream@1.6.0 </tspan>
 <tspan x="10" y="442">  │ │ ├── inherits@2.0.3 </tspan>
-<tspan x="10" y="458">  │ │ ├─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="458">  │ │ ├─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="474">  │ │ │ ├── buffer-shims@1.0.0 </tspan>
 <tspan x="10" y="490">  │ │ │ ├── core-util-is@1.0.2 </tspan>
 <tspan x="10" y="506">  │ │ │ ├── isarray@1.0.0 </tspan>
@@ -43,7 +43,7 @@
 <tspan x="10" y="650">  │   ├─┬ promise@7.1.1 </tspan>
 <tspan x="10" y="666">  │   │ └── asap@2.0.5 </tspan>
 <tspan x="10" y="682">  │   └── qs@6.4.0 </tspan>
-<tspan x="10" y="698">  └─┬ uglify-js@2.8.21 </tspan>
+<tspan x="10" y="698">  └─┬ uglify-js@2.8.22 </tspan>
 <tspan x="10" y="714">    ├── source-map@0.5.6 </tspan>
 <tspan x="10" y="730">    ├── uglify-to-browserify@1.0.2 </tspan>
 <tspan x="10" y="746">    └─┬ yargs@3.10.0 </tspan>

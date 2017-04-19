@@ -56,6 +56,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.webpack-isomorphic-tools.webpack-isomorphic-tools">
+            function <span class="apidocSignatureSpan"></span>webpack-isomorphic-tools
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.webpack-isomorphic-tools.plugin">
             function <span class="apidocSignatureSpan">webpack-isomorphic-tools.</span>plugin
             <span class="apidocSignatureSpan">(options)</span>
@@ -496,6 +505,42 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.webpack-isomorphic-tools" id="apidoc.module.webpack-isomorphic-tools">module webpack-isomorphic-tools</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webpack-isomorphic-tools.webpack-isomorphic-tools" id="apidoc.element.webpack-isomorphic-tools.webpack-isomorphic-tools">
+        function <span class="apidocSignatureSpan"></span>webpack-isomorphic-tools
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function webpack_isomorphic_tools(options) {
+		(0, _classCallCheck3.default)(this, webpack_isomorphic_tools);
+		this.hooks = [];
+		this.cached_assets = [];
+
+		// take the passed in options
+		this.options = (0, _helpers.convert_from_camel_case)((0, _helpers.clone)(options));
+
+		// add missing fields, etc
+		(0, _common.normalize_options)(this.options);
+
+		// set development mode flag
+		this.options.development = process.env.NODE_ENV !== 'production';
+
+		// set require-hacker debug mode if run in debug mode
+		if (this.options.debug) {
+			_requireHacker2.default.log.options.debug = true;
+		}
+
+		// logging
+		this.log = new _log2.default('webpack-isomorphic-tools', { debug: this.options.debug });
+
+		this.log.debug('instantiated webpack-isomorphic-tools v' + require('../package.json').version + ' with options', this.options);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
