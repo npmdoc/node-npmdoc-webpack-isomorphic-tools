@@ -1,6 +1,6 @@
 # npmdoc-webpack-isomorphic-tools
 
-#### api documentation for  [webpack-isomorphic-tools (v3.0.2)](https://github.com/halt-hammerzeit/webpack-isomorphic-tools#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-webpack-isomorphic-tools.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-webpack-isomorphic-tools) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-webpack-isomorphic-tools.svg)](https://travis-ci.org/npmdoc/node-npmdoc-webpack-isomorphic-tools)
+#### basic api documentation for  [webpack-isomorphic-tools (v3.0.2)](https://github.com/halt-hammerzeit/webpack-isomorphic-tools#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-webpack-isomorphic-tools.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-webpack-isomorphic-tools) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-webpack-isomorphic-tools.svg)](https://travis-ci.org/npmdoc/node-npmdoc-webpack-isomorphic-tools)
 
 #### Transforms CSS-alike text into a React style JSON object
 
@@ -87,7 +87,8 @@
         "test-coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --colors --reporter dot test/ --recursive",
         "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --compilers js:babel-core/register --colors --reporter spec test/ --recursive"
     },
-    "version": "3.0.2"
+    "version": "3.0.2",
+    "bin": {}
 }
 ```
 
