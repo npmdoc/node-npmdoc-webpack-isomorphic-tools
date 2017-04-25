@@ -595,7 +595,23 @@ _step = _iterator.next()).done); _iteratorNormalCompletion = true) {
 		}
 	}
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var webpack_stats_path = _path2.default.resolve(this.options.project_path, this.options.webpack_stats_file_path);
+
+	// selfie
+	var plugin = this;
+
+	// when all is done
+	// https://github.com/webpack/docs/wiki/plugins
+	compiler.<span class="apidocCodeKeywordSpan">plugin</span>('done', function (stats) {
+		plugin.log.debug('------------------- Started -------------------');
+
+		var json = stats.toJson({
+			context: webpack_configuration.context
+		});
+
+		// output some info to the console if in development mode
+...</pre></li>
     </ul>
 
 
@@ -740,7 +756,22 @@ _step = _iterator.next()).done); _iteratorNormalCompletion = true) {
 
 	return asset_path;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+					}
+
+					return './~/' + loader_parts.join('?');
+				});
+
+				var global_asset_path = _requireHacker2.default.resolve(local_asset_path, module);
+
+				var path = parts.join('!') + '!' + _this3.<span class="apidocCodeKeywordSpan">normalize_asset_path</span>(global_asset_path);
+
+				var asset = _this3.asset_source(path);
+
+				if (asset === undefined) {
+					return;
+				}
+...</pre></li>
     </ul>
 
 
@@ -1444,7 +1475,23 @@ _step = _iterator.next()).done); _iteratorNormalCompletion = true) {
 		}
 	}
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var webpack_stats_path = _path2.default.resolve(this.options.project_path, this.options.webpack_stats_file_path);
+
+	// selfie
+	var plugin = this;
+
+	// when all is done
+	// https://github.com/webpack/docs/wiki/plugins
+	compiler.<span class="apidocCodeKeywordSpan">plugin</span>('done', function (stats) {
+		plugin.log.debug('------------------- Started -------------------');
+
+		var json = stats.toJson({
+			context: webpack_configuration.context
+		});
+
+		// output some info to the console if in development mode
+...</pre></li>
     </ul>
 
 
@@ -1866,21 +1913,22 @@ log);
 	return this;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
+===================
 
-var webpack_isomorphic_tools_plugin =
-// webpack-isomorphic-tools settings reside in a separate .js file
-// (because they will be used in the web server code too).
-new Webpack_isomorphic_tools_plugin(require('./webpack-isomorphic-tools-configuration'))
-// also enter development mode since it's a development webpack configuration
-// (see below for explanation)
-.<span class="apidocCodeKeywordSpan">development</span>()
+  * Fixed a bug when a CSS compilation error would terminate Webpack build
 
-// usual Webpack configuration
-module.exports =
-{
-context: '(required) your project path here',
+2.6.2 / 11.10.2016
+===================
 
-module:
+  * Undeprecated `.<span class="apidocCodeKeywordSpan">development</span>()` method for the webpack plugin (since `process.env.NODE_ENV
+` makes no sense there)
+
+2.6.0 / 11.10.2016
+===================
+
+  * Deprecated `.development()` method in favour of examining `process.env.NODE_ENV`
+
+2.5.8 / 29.08.2016
 ...</pre></li>
     </ul>
 
@@ -2002,7 +2050,23 @@ plugins:
 		_this.log.info('HTTP service listening on port ' + _this.options.port);
 	});
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Webpack_isomorphic_tools_plugin.prototype.apply = function (compiler) {
+	// start HTTP service in development mode
+	// https://github.com/halt-hammerzeit/webpack-isomorphic-tools/issues/92
+	//
+	// (`.apply()` is only called once, so can start the dev server here)
+	//
+	if (this.options.development &amp;&amp; this.options.port) {
+		this.<span class="apidocCodeKeywordSpan">start_dev_server</span>();
+	}
+
+	// Webpack configuration
+	var webpack_configuration = compiler.options;
+
+	// validate webpack configuration
+	if (!webpack_configuration.context) {
+...</pre></li>
     </ul>
 
 
